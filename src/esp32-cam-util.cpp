@@ -30,7 +30,7 @@ void Camera::warmup() {
 #define HREF_GPIO_NUM     23
 #define PCLK_GPIO_NUM     22
 
-static camera_config_t Camera::config;
+camera_config_t Camera::config;
 
 int Camera::configure(int fb_max, int quality, bool greyscale, framesize_t framesize) {
 
