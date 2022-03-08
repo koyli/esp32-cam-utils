@@ -86,3 +86,12 @@ int Camera::configure(int fb_max, int quality, bool greyscale, framesize_t frame
     return -1;
 }
 
+
+
+camera_fb_t* Camera::getFrame() {
+    return esp_camera_fb_get();
+}
+
+void Camera::returnFrame(camera_fb_t* frame) {
+    esp_camera_fb_return(frame);
+}
