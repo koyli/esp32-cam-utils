@@ -55,7 +55,7 @@ int Camera::configure(int fb_max, int quality, bool greyscale, framesize_t frame
     config.xclk_freq_hz = 20000000;
     config.pixel_format = PIXFORMAT_JPEG;
 
-    config.frame_size = FRAMESIZE_UXGA;
+    config.frame_size = framesize;
 
     config.jpeg_quality = 6;  //74.5 from 7
 
