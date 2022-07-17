@@ -60,7 +60,10 @@ int Camera::configure(int fb_max, int quality, bool greyscale, framesize_t frame
     config.jpeg_quality = 6;  //74.5 from 7
 
     config.fb_count = fb_max + 1;
-
+    digitalWrite(PWDN_GPIO_NUM, LOW);
+    delay(10);
+    digitalWrite(PWDN_GPIO_NUM, HIGH);
+    delay(10);
     // camera init
     esp_err_t cam_err = esp_camera_init(&config);
     if (cam_err != ESP_OK) {
